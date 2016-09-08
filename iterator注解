@@ -1,0 +1,11 @@
+Iterator 迭代器 <c:iterator >标签
+
+http://baike.baidu.com/link?url=VpwoDBxmuusepxUD07FribxqPZyWDi6foKe_07Zb71h9dv2NZ_UzJTGsPv9cdTVBRd3EVeSMVawRcLeooh2X0a  百度注解
+http://www.cnblogs.com/lraa/archive/2012/11/28/2793103.html 博客
+简单的理解为遍历，标准化遍历各类容器里面的所有对象的方法类
+ 
+test里没有能够用到${}的地方，通过#st.even（返回是否为偶数）或#st.index(返回当前元素索引)
+ 
+
+
+
