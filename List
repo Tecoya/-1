@@ -1,0 +1,90 @@
+Hibernate的集合属性
+List	List<String> list=new ArrayList<String>()
+set	Set<String> set=new HashSet<String>()
+Array	 String[] Array;
+Map	Map<String ,String> map=new HashMap<String ,String>()
+SortedSet	SortedSet<String> str=new TreeSet<String>()
+SortedMap	SortedMap<String> str=new TreeMap<String>()
+
+List集合属性
+@OrderColumn是映射集合元素索引的列，有时与外键形成主键
+ 
+在Person中，只是单纯的list集合时，new一个list集合
+例子：List
+
+在main（）函数中
+1>
+Person person=new Person();
+person.getSchool().add();
+2>
+List<String> schools = new ArrayList<>();
+Person person=new Person();
+schools.add();
+person.setSchool(school)
+
+ 
+ 
+ 
+在Person中,new一个list集合，自定义集合属性的元素为组件的list集合，自定义集合的对象，需要在本对象函数中使用构造方法，目的是因为____
+例子：Collection-component
+在main（）函数中
+Person person=new Person();
+1>
+person.getNicks().add(new Name(“”,””))
+2>
+List<String> nicks=new ArrayList<String>();
+Name name=new Name(“”,””);
+nicks.add(name);
+person.setNicks(nicks)
+
+
+
+Map集合属性
+@MapKeyColumn 映射保存Map key的数据列 
+在Person中，只是单纯的map集合时，new一个map集合
+例子：map
+在main（）中，
+Person person=new Person();
+1> 
+Map<String , Float> scores= new HashMap< String , Float >();
+scores.put(“string”,int)
+person.setScores(scores)
+2>
+Person.getScores().put(“string”,int)
+
+ 
+ 
+在Person中,new一个map集合，自定义集合属性的元素为组件的map集合，自定义集合的对象，需要在本对象函数中使用构造方法，目的是因为____
+例子：Collection-component
+在main（）中，
+Person person=new Person()
+1>
+person.getScore().put(“string”,new Scores(“string”,int));
+2>
+Score score=new Score(“string”,int);
+Map<String , Score> scores= new HashMap<>();
+scores.put(“string”,score);
+Person.setScore(scores);
+
+List与map集合的属性 例子：Collection-component
+ 
+ 
+ 
+ 
+是list与map的结合，与单个相似
+
+ 
+数组 与list相似，只是最后一句不同
+ 
+
+集合属性为组件
+•	组件作为MAP的索引
+•	组件作为复合主键
+•	多列作为联合主键，使用多个@Id，PO的要求如下：
+–	必须要有无参的构造方法
+–	必须要实现序列化接口
+–	要重写equals和hashCode方法
+Map key的组件类型
+例子：map-key-component
+注意：此时没有MapKeyColumn
+
